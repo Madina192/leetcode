@@ -28,8 +28,8 @@ public class Permutation {
     public static void main(String[] args) {
         //hackPassword(3, "abcd");
         //foundAllPasswordVariations(3, "abcd");
-        //generateVariationsRecursive("abcd", 3, "");
-        generateVariations("abcd", 3);
+        generateVariationsRecursive("abcd", 3, "");
+        //generateVariations("abcd", 3);
 //        System.out.println(2%4);
 //        System.out.println("abcd".charAt(3 % 4));
     }
@@ -50,6 +50,7 @@ public class Permutation {
     private static void generateVariationsRecursive(String input, int length, String current) {
         if (length == 0) {
             System.out.println(current);
+            return;
         }
 
         for (int i = 0; i < input.length(); i++) {
