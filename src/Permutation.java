@@ -34,7 +34,7 @@ public class Permutation {
 //        System.out.println("abcd".charAt(3 % 4));
     }
 
-    public static void foundAllPasswordVariations(int length, String str) {
+    public static void foundAllPasswordVariations(int length, String str) {   //the worst way
         char[] chars = str.toCharArray();
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
